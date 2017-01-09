@@ -62,11 +62,7 @@ disjob分布式任务调度概述<br/>
   
 		@JobDec(group="alarm",jobName="alarmJob1",quartz="0/10 * * * * ?",fireNow=true)
 		public class AlarmJobAction implements EJob{
-  			
-			 @Override　		
-			 public void beforeExecute(SchedulerParam schedulerParam) {
-         
-		         }
+  					 
 			
 			@Override
 			public void execute(SchedulerParam schedulerParam)throws TaskExecuteException {
@@ -74,6 +70,10 @@ disjob分布式任务调度概述<br/>
 			 DebugInfoPrintUtil.debug("D:/"+this.getClass().getSimpleName()+"_.log", this.getClass().getSimpleName()+ "       　			at:"+TimeUtils.getFormatNow());
     			}
 			
+			@Override　		
+			public void beforeExecute(SchedulerParam schedulerParam) {
+         
+		        }
 			@Override
     			public void executeSuccess(SchedulerParam schedulerParam) {
          
@@ -88,8 +88,8 @@ disjob分布式任务调度概述<br/>
 
 		public class FireNowMain {
 			public static void main(String[] args) {
-			String path = "E:/workspace/disjob/EjobJavaApp/src/main/resources/META-INF/ejob.properties"; 
-			new EjobBootstrap().startUpEjob(EjobConstants.StartUpType.JAVA_APPLICATION, path);
+			   String path = "E:/workspace/disjob/EjobJavaApp/src/main/resources/META-INF/ejob.properties"; 
+			   new EjobBootstrap().startUpEjob(EjobConstants.StartUpType.JAVA_APPLICATION, path);
 			}
 		}
 
