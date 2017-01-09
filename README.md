@@ -37,8 +37,26 @@ disjob分布式任务调度概述<br/>
 #四、主要流程图  
 
   ![](https://github.com/huangyiminghappy/DisJob/blob/master/imgs/%E8%B0%83%E5%BA%A6%E4%B8%AD%E5%BF%83%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
-  
-#五、Quick Start
+#五、模块介绍　
+##Disjob-event：
+  一个事件通知模式的基础公共模块，在disjob的服务端和客户端代码中都有引入该模块。
+##Disjob-event：
+一个基于无阻塞队列的线程池顺序调度公共模块，线程池执行完队列中一个任务继续有序的执行下一个任务。在disjob 的服务端和客户端代码中都有引入该模块。
+##Disjob-jar：
+服务端发布job只需要引入该包，实现相应的接口，配置zk地址和节点信息，启动服务即可将job发布到zk上并启动netty服务接收客户端的定时调用。
+##Common：
+disjob客户端公共模块
+##Monitor：
+disjob客户端的监控模块，disjob服务端的进度信息以及任务接收、任务开始执行、执行结束时间传给monitor模块保存进db中
+##Rpc：
+disjob客户端的rpc模块，rpc通信以及任务调度是通过该模块执行的
+##reister：
+disjob客户端的注册模块，zk的监听，选主等都是在该模块中进行的
+##Console：
+disjob 后台管理模块，在后台对job进行管理、监控、登陆等都是通过该模块
+##Disjob-java-web：
+ 服务端接入disjob的例子，实际步骤就是引入disjob-jar然后按照要求配置并实现接口接口
+#六、Quick Start
 ##maven 引入disjob-jar
           <dependency><br/>
 			<groupId>com.hqyg</groupId><br/>
@@ -88,9 +106,9 @@ disjob分布式任务调度概述<br/>
 		}
 
 ###4 在我们的disjob-console 就可以看到刚刚注册成功的job以及这些job 的运行状态。
-   ####1、导入disjob.sql到db中
-   ####1、导入disjob.sql到db中
-
+####1、导入disjob.sql到db中
+####2、解压disjob.zip文件放入pom指定环境的配置文件中
+　　如pom的profiles标签中有三种环境可配置,根据实际环境在指定路径配置conf文件，如在 <Disjob-conf>D:/conf/Disjob</Disjob-conf>路径下放入 　　　　disjob.zip 中的jdbc.properties等文件。
    
    ![](https://github.com/huangyiminghappy/DisJob/blob/master/imgs/index.png)
   
