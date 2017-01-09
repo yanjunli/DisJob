@@ -57,14 +57,13 @@ disjob分布式任务调度概述<br/>
   #where is the job class inside the packages<br/>
   job.packages=com.hqyg.job.pack;<br/>
   
-###2.业务所在的类必须实现EJob 接口，所有的业务实现都在execute 方法中，同时加上暴露给我们EJOB 调度中心的注解<br/>
-
+###2.业务所在的类必须实现EJob 接口，所有的业务实现都在execute 方法中，同时加上暴露给我们EJOB 调度中心的注解
   
-		 @JobDec(group="alarm",jobName="alarmJob1",quartz="0/10 * * * * ?",fireNow=true)
-		 public class AlarmJobAction implements EJob{
+		      @JobDec(group="alarm",jobName="alarmJob1",quartz="0/10 * * * * ?",fireNow=true)
+		       public class AlarmJobAction implements EJob{
   			@Override
 			public void execute(SchedulerParam schedulerParam)throws TaskExecuteException {
-                        DebugInfoPrintUtil.debug("D:/"+this.getClass().getSimpleName()+"_.log", this.getClass().getSimpleName()+ "       　			at:"+TimeUtils.getFormatNow());
+                         DebugInfoPrintUtil.debug("D:/"+this.getClass().getSimpleName()+"_.log", this.getClass().getSimpleName()+ "       　			at:"+TimeUtils.getFormatNow());
     			}	
 			@Override　		
 			public void beforeExecute(SchedulerParam schedulerParam) {
