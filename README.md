@@ -68,11 +68,10 @@ disjob分布式任务调度概述<br/>
 			@Override　		
 			 public void beforeExecute(SchedulerParam schedulerParam) {
          
-		        }
+		}
 			@Override
     			public void executeSuccess(SchedulerParam schedulerParam) {
-         
-    			}
+         		}
     			@Override
     			public void executeFail(SchedulerParam schedulerParam) {
          
