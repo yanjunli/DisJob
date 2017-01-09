@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.hqyg</groupId>
-  <artifactId>Ejob-jar</artifactId>
+  <artifactId>Disjob-jar</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
@@ -95,12 +95,12 @@
 		</dependency>
 		<dependency>
 			<groupId>com.hqyg</groupId>
-			<artifactId>Ejob-quence</artifactId>
+			<artifactId>Disjob-quence</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			 <groupId>com.hqyg</groupId>
-			 <artifactId>Ejob-event</artifactId>
+			 <artifactId>Disjob-event</artifactId>
 			 <version>1.0.0</version>
 		</dependency>
 	</dependencies>
