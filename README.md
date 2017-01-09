@@ -82,8 +82,8 @@ public class AlarmJobAction implements EJob{
 ###3.调用我们给定的api 即可注册 [注意：]configPath 必须给的是绝对路径
 public class FireNowMain {</br>
     public static void main(String[] args) { </br>
-        String path = "E:/workspace/disjob/EjobJavaApp/src/main/resources/META-INF/ejob.properties"; </br>
-        new EjobBootstrap().startUpEjob(EjobConstants.StartUpType.JAVA_APPLICATION, path);</br>
+         String path = "E:/workspace/disjob/EjobJavaApp/src/main/resources/META-INF/ejob.properties"; </br>
+         new EjobBootstrap().startUpEjob(EjobConstants.StartUpType.JAVA_APPLICATION, path);</br>
     }</br>
 }</br>
 ###4 在我们的disjob-console 就可以看到刚刚注册成功的job以及这些job 的运行状态。
