@@ -88,7 +88,10 @@ disjob分布式任务调度概述<br/>
 		}
 
 ###4 在我们的disjob-console 就可以看到刚刚注册成功的job以及这些job 的运行状态。
+   ####1、导入disjob.sql到db中
+   ####1、导入disjob.sql到db中
 
-   ![](https://github.com/huangyiminghappy/DisJob/blob/master/imgs/index.png)
+   
+   ![](https://github.com/huangyiminghappy/DisJob/blob/master/imgs/index.png)
   
   
