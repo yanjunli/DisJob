@@ -43,7 +43,7 @@ disjob分布式任务调度概述<br/>
           <dependency><br/>
 			<groupId>com.hqyg</groupId><br/>
 			<artifactId>Disjob-jar</artifactId><br/>
-			<version>0.0.1-SNAPSHOT</version><br/>
+			<version>1.0.0</version><br/>
          </dependency><br>
   我们先构造disjob的服务端（被调用方），先用最简单的普通java接入方式做例子：<br/>
 ## 普通的java app 应用接入步骤：<br/>
