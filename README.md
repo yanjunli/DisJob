@@ -62,11 +62,11 @@ disjob分布式任务调度概述<br/>
 			@JobDec(group="alarm",jobName="alarmJob1",quartz="0/10 * * * * ?",fireNow=true)	
 			public class AlarmJobAction implements EJob{
 			@Override
-			public void execute(SchedulerParam schedulerParam)throws TaskExecuteException {
+			 public void execute(SchedulerParam schedulerParam)throws TaskExecuteException {
                          DebugInfoPrintUtil.debug("D:/"+this.getClass().getSimpleName()+"_.log", this.getClass().getSimpleName()+ "       　			at:"+TimeUtils.getFormatNow());
-    			}	
+			}	
 			@Override　		
-			public void beforeExecute(SchedulerParam schedulerParam) {
+			 public void beforeExecute(SchedulerParam schedulerParam) {
          
 		        }
 			@Override
