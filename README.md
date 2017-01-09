@@ -46,9 +46,9 @@ disjob分布式任务调度概述<br/>
 			<version>0.0.1-SNAPSHOT</version><br/>
          </dependency><br>
   我们先构造disjob的服务端（被调用方），先用最简单的普通java接入方式做例子：<br/>
- ## 普通的java app 应用接入步骤：<br/>
+## 普通的java app 应用接入步骤：<br/>
   
- ###1.在指定的 **.properties 文件 配置ejob必要的一些参数：zookeeper 集群地址、服务监听的端口，以及job所在的package<br/>
+###1.在指定的 **.properties 文件 配置ejob必要的一些参数：zookeeper 集群地址、服务监听的端口，以及job所在的package<br/>
   
   #please tall me where is the zookeeper server host<br/>
   zk.host=127.0.0.1:2181<br/>
@@ -57,7 +57,7 @@ disjob分布式任务调度概述<br/>
   #where is the job class inside the packages<br/>
   job.packages=com.hqyg.job.pack;<br/>
   
- ###2.业务所在的类必须实现EJob 接口，所有的业务实现都在execute 方法中，同时加上暴露给我们EJOB 调度中心的注解<br/>
+###2.业务所在的类必须实现EJob 接口，所有的业务实现都在execute 方法中，同时加上暴露给我们EJOB 调度中心的注解<br/>
   
   @JobDec(group="alarm",jobName="alarmJob1",quartz="0/10 * * * * ?",fireNow=true)
 public class AlarmJobAction implements EJob{
