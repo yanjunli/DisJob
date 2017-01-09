@@ -2,7 +2,7 @@
 
 DisJob 是一个基于Quartz、Netty、ZooKeeper的分布式rpc调度job框架。
 
-#一：项目背景
+#一、项目背景
 disjob分布式任务调度概述<br/>
 公司现有定时任务（job）有几千个，基于crontab实现分散于很多系统中，有时会发生故障，原因有多种，job执行过程中本身发生故障，系统进程挂 掉，系统所在服务器宕机；对于需要执行几个小时的大型job没有分片功能，或者不能非常方便的分片。因此disjob调度中心是为解决这些问题而设计，初步计 划要实现的功能如下：<br/>
         1、防单点故障：业务系统的单点故障以及调度中心本身的单点故障<br/>
@@ -23,8 +23,9 @@ disjob分布式任务调度概述<br/>
         2、使用我们提供的网络API给调度中心发送日志消息，会一定程度侵入业务代码，只是增加代码，不会改变原有代码的逻辑<br/>
       
   
-#二：总体架构
+#二、总体架构
   
   ![](https://raw.githubusercontent.com/huangyiminghappy/DisJob/master/imgs/disjob%E6%9E%B6%E6%9E%84%E5%9B%BE.bmp)
 
   
+#三、ZooKeeper数据存储模型
