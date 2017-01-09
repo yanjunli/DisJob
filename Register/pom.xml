@@ -31,7 +31,7 @@
 			<id>dev</id>
 			<properties>
 				<log-path>D:/EDisjob/log/</log-path>
-				<Disjob-conf>/D:/globalegrowconf/Disjob</Disjob-conf>
+				<Disjob-conf>D:/conf/Disjob</Disjob-conf>
 			</properties>
 			<!-- 默认激活开发环境 -->
 			<activation>
