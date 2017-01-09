@@ -32,4 +32,4 @@ disjob分布式任务调度概述<br/>
 
   ![](https://github.com/huangyiminghappy/DisJob/blob/master/imgs/zookeeper%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B.png)
   
-  ![](https://github.com/huangyiminghappy/DisJob/blob/master/imgs/zookeeper%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B.png)
+  ![](https://github.com/huangyiminghappy/DisJob/blob/master/imgs/%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E5%9B%BE.png)
