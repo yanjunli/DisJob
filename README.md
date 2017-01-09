@@ -40,8 +40,54 @@ disjob分布式任务调度概述<br/>
   
 #五、Quick Start
 ##maven 引入disjob-jar
-            <dependency>
-			<groupId>com.hqyg</groupId>
-			<artifactId>Disjob-jar</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+          <dependency><br/>
+			<groupId>com.hqyg</groupId><br/>
+			<artifactId>Disjob-jar</artifactId><br/>
+			<version>0.0.1-SNAPSHOT</version><br/>
+         </dependency><br>
+  我们先构造disjob的服务端（被调用方），先用最简单的普通java接入方式做例子：<br/>
+## 普通的java app 应用接入步骤：<br/>
+  
+###1.在指定的 **.properties 文件 配置ejob必要的一些参数：zookeeper 集群地址、服务监听的端口，以及job所在的package<br/>
+  
+  #please tall me where is the zookeeper server host<br/>
+  zk.host=127.0.0.1:2181<br/>
+  #start the server listener on the port,if the port has occupancy then change the port<br/>
+  server.port=9501<br/>
+  #where is the job class inside the packages<br/>
+  job.packages=com.hqyg.job.pack;<br/>
+  
+###2.业务所在的类必须实现EJob 接口，所有的业务实现都在execute 方法中，同时加上暴露给我们EJOB 调度中心的注解
+  
+			@JobDec(group="alarm",jobName="alarmJob1",quartz="0/10 * * * * ?",fireNow=true)	
+			public class AlarmJobAction implements EJob{
+			@Override
+			public void execute(SchedulerParam schedulerParam)throws TaskExecuteException {
+			 DebugInfoPrintUtil.debug("D:/"+this.getClass().getSimpleName()+"_.log", this.getClass().getSimpleName()+ "       　			at:"+TimeUtils.getFormatNow());
+			}	
+			@Override　		
+			public void beforeExecute(SchedulerParam schedulerParam) {
+         
+			}
+			@Override
+			public void executeSuccess(SchedulerParam schedulerParam) {
+			}
+			@Override
+			public void executeFail(SchedulerParam schedulerParam) {
+         
+			}
+		}
+ 
+###3.调用我们给定的api 即可注册 [注意：]configPath 必须给的是绝对路径
+
+		public class FireNowMain {
+			public static void main(String[] args) {
+			   String path = "E:/workspace/disjob/EjobJavaApp/src/main/resources/META-INF/ejob.properties"; 
+			   new EjobBootstrap().startUpEjob(EjobConstants.StartUpType.JAVA_APPLICATION, path);
+			}
+		}
+
+###4 在我们的disjob-console 就可以看到刚刚注册成功的job以及这些job 的运行状态。
+   
+  
+  
