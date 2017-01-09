@@ -23,7 +23,7 @@ disjob分布式任务调度概述<br/>
         2、使用我们提供的网络API给调度中心发送日志消息，会一定程度侵入业务代码，只是增加代码，不会改变原有代码的逻辑<br/>
       
   
- #二：总体架构
+#二：总体架构
   
   ![](https://raw.githubusercontent.com/huangyiminghappy/DisJob/master/imgs/disjob%E6%9E%B6%E6%9E%84%E5%9B%BE.bmp)
 
