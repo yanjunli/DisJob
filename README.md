@@ -80,8 +80,9 @@ public class AlarmJobAction implements EJob{
     }
 }
 ###3.调用我们给定的api 即可注册 [注意：]configPath 必须给的是绝对路径
-public class FireNowMain {
-    public static void main(String[] args) { 
+
+public class FireNowMain {</br>
+    public static void main(String[] args) { 
          String path = "E:/workspace/disjob/EjobJavaApp/src/main/resources/META-INF/ejob.properties"; 
          new EjobBootstrap().startUpEjob(EjobConstants.StartUpType.JAVA_APPLICATION, path);
     }
