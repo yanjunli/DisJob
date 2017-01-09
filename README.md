@@ -70,7 +70,7 @@ disjob分布式任务调度概述<br/>
          
 		 DebugInfoPrintUtil.debug("D:/"+this.getClass().getSimpleName()+"_.log", this.getClass().getSimpleName()+ "       　		at:"+TimeUtils.getFormatNow());
     		}
-   		 @Override
+		@Override
     		public void executeSuccess(SchedulerParam schedulerParam) {
          
     		}
