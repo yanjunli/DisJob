@@ -37,3 +37,11 @@ disjob分布式任务调度概述<br/>
 #四、主要流程图  
 
   ![](https://github.com/huangyiminghappy/DisJob/blob/master/imgs/%E8%B0%83%E5%BA%A6%E4%B8%AD%E5%BF%83%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
+  
+#五、Quick Start
+##maven 引入disjob-jar
+            <dependency>
+			<groupId>com.hqyg</groupId>
+			<artifactId>Disjob-jar</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
