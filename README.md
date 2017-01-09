@@ -58,35 +58,36 @@ disjob分布式任务调度概述<br/>
   job.packages=com.hqyg.job.pack;<br/>
   
 ###2.业务所在的类必须实现EJob 接口，所有的业务实现都在execute 方法中，同时加上暴露给我们EJOB 调度中心的注解<br/>
+
   
 		@JobDec(group="alarm",jobName="alarmJob1",quartz="0/10 * * * * ?",fireNow=true)
 		public class AlarmJobAction implements EJob{
-  		@Override　		
-　　　　　　　　　public void beforeExecute(SchedulerParam schedulerParam) {
+  			@Override　		
+　　　　　　　　　	public void beforeExecute(SchedulerParam schedulerParam) {
          
-		}
-		@Override
-		public void execute(SchedulerParam schedulerParam)throws TaskExecuteException {
+			}
+			@Override
+			public void execute(SchedulerParam schedulerParam)throws TaskExecuteException {
          
-		 DebugInfoPrintUtil.debug("D:/"+this.getClass().getSimpleName()+"_.log", this.getClass().getSimpleName()+ "       　		at:"+TimeUtils.getFormatNow());
-    		}
-		@Override
-    		public void executeSuccess(SchedulerParam schedulerParam) {
+			 DebugInfoPrintUtil.debug("D:/"+this.getClass().getSimpleName()+"_.log", this.getClass().getSimpleName()+ "       　			at:"+TimeUtils.getFormatNow());
+    			}
+			@Override
+    			public void executeSuccess(SchedulerParam schedulerParam) {
          
-    		}
-    		@Override
-    		public void executeFail(SchedulerParam schedulerParam) {
+    			}
+    			@Override
+    			public void executeFail(SchedulerParam schedulerParam) {
          
-    		}
-　	}
+    			}
+　		}
  
 ###3.调用我们给定的api 即可注册 [注意：]configPath 必须给的是绝对路径
 
 		public class FireNowMain {
-		public static void main(String[] args) {
-		String path = "E:/workspace/disjob/EjobJavaApp/src/main/resources/META-INF/ejob.properties"; 
-		new EjobBootstrap().startUpEjob(EjobConstants.StartUpType.JAVA_APPLICATION, path);
-		}
+			public static void main(String[] args) {
+			String path = "E:/workspace/disjob/EjobJavaApp/src/main/resources/META-INF/ejob.properties"; 
+			new EjobBootstrap().startUpEjob(EjobConstants.StartUpType.JAVA_APPLICATION, path);
+			}
 		}
 
 ###4 在我们的disjob-console 就可以看到刚刚注册成功的job以及这些job 的运行状态。
