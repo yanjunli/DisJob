@@ -62,7 +62,7 @@ disjob 后台管理模块，在后台对job进行管理、监控、登陆等都�
 			<groupId>com.hqyg</groupId><br/>
 			<artifactId>Disjob-jar</artifactId><br/>
 			<version>1.0.0</version><br/>
-         </dependency><br>
+         </dependency><br>
   我们先构造disjob的服务端（被调用方），先用最简单的普通java接入方式做例子：<br/>
 ## 普通的java app 应用接入步骤：<br/>
   
@@ -109,7 +109,8 @@ disjob 后台管理模块，在后台对job进行管理、监控、登陆等都�
 ####1、导入disjob.sql到db中
 ####2、解压disjob.zip文件放入pom指定环境的配置文件中
 　　如pom的profiles标签中有三种环境可配置,根据实际环境在指定路径配置conf文件，如在 <Disjob-conf>D:/conf/Disjob</Disjob-conf>路径下放入 　　　　disjob.zip 中的jdbc.properties等文件。
-   
+  最后对DisJob的pom文件 所在路径下执行mvn clean package install -Ppublish -X -Dmaven.test.skip=true(这里是执行publish环境)</br>
+#####disjob后台效果:
    ![](https://github.com/huangyiminghappy/DisJob/blob/master/imgs/index.png)
   
   
