@@ -94,7 +94,7 @@ public class ServerNodeListener implements PathChildrenCacheListener{
 					}
 				}
 				ServerLinkedService.clientProvidersMap.remove(hostPort);
-				RpcClientCache.removeRpcClient(hostPort);
+				//RpcClientCache.removeRpcClient(hostPort);
 				if(!CollectionUtils.isEmpty(currentChilds)){
 					ServerLinkedService.mergerFailRpcRequest(hostPort, currentChilds.get(0));
 				}else{
