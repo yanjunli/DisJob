@@ -136,7 +136,7 @@ public class ServerNodeListener implements PathChildrenCacheListener{
 			public String exe() {
 				return znode.getJobConfig(client, serverGroup, serverName);
 			}
-		});
+		}); 
 		Job job = null ;
 		if(StringUtils.isEmpty(jobConfig)){
 			LoggerUtil.error("read data from config node is null. path is " + path);
