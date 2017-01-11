@@ -100,7 +100,7 @@ public class EjobServerServiceImpl implements EjobServerService {
         String masterHostPath = Constants.EJOB_SERVER_NODE_MASTER_IP;
         String masterIp ="";
 		try {
-			masterIp = SlaveUtils.leaderLatch.getLeader().getId();
+			masterIp = SlaveUtils.getLeaderLatch().getLeader().getId();
 		} catch (Exception e) {
 			LoggerUtil.error("get master by leaderLatch ERROR",e);
 		}

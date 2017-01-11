@@ -40,7 +40,7 @@ public class ServerSessionListener implements PathChildrenCacheListener{
 	@Override
 	public void childEvent(CuratorFramework client, PathChildrenCacheEvent event)throws Exception {
 		  ZnodeApiCuratorImpl znode = new ZnodeApiCuratorImpl();
-		  String masterIp = SlaveUtils.leaderLatch.getLeader().getId();
+		  String masterIp = SlaveUtils.getLeaderLatch().getLeader().getId();
 		  boolean isMaster = false;
 		  if (StringUtils.isNotEmpty(masterIp)
 					&& masterIp.equals(new LocalHost().getIp())) { // master断线后选出新的master然后旧的master恢复连接,此时已经不再是master,不能创建job

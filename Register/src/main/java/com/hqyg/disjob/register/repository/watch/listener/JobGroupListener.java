@@ -41,7 +41,7 @@ public class JobGroupListener extends AbstractJobBuild{
         if (org.apache.curator.framework.recipes.cache.PathChildrenCacheEvent.Type.CHILD_ADDED == event.getType()){
             LoggerUtil.debug("add group is ," + event.getData().getPath());
             String groupNode = event.getData().getPath();
-            String masterIp = SlaveUtils.leaderLatch.getLeader().getId();
+            String masterIp = SlaveUtils.getLeaderLatch().getLeader().getId();
 
 			if(StringUtils.isNotEmpty(masterIp) && masterIp.equals(new LocalHost().getIp())){
 				isMaster = true;   

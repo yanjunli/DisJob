@@ -47,7 +47,7 @@ public class SlaveIpNodeListener implements PathChildrenCacheListener {
 		if (event.getType() == Type.CHILD_REMOVED) {
 			// String masterIp = nodeApi.getData(client,
 			// Constants.EJOB_SERVER_NODE_MASTER_IP);
-			String masterIp = SlaveUtils.leaderLatch.getLeader().getId();
+			String masterIp = SlaveUtils.getLeaderLatch().getLeader().getId();
 
 			// 只有masterIp才能监听其他slave节点down的情况来进行job分配,有可能会存在某master暂时断线然后slave便为新master此时原来的master又网络好了,
 			// 两个监听slave变化导致job分配两次,故增加masterIp判断

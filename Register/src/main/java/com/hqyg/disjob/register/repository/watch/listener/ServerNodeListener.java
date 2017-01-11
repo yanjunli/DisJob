@@ -77,7 +77,7 @@ public class ServerNodeListener implements PathChildrenCacheListener{
 				ServerLinkedService.clientProvidersMap.put(hostPort, hostPort);
 		   }
 		   ZooKeeperRegistryUtils.notify(url, notifyListener, RegisterUtils.nodeChildsToUrls(client, serverUrl, currentChilds));
-		   String masterIp = SlaveUtils.leaderLatch.getLeader().getId();
+		   String masterIp = SlaveUtils.getLeaderLatch().getLeader().getId();
 		   if (StringUtils.isNotEmpty(masterIp)&& masterIp.equals(new LocalHost().getIp())) { 
 			   checkTriggerJob(client, path);
 		   }

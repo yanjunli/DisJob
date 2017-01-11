@@ -8,6 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -17,6 +18,7 @@ import org.apache.curator.framework.api.transaction.CuratorTransactionFinal;
 import org.apache.curator.framework.recipes.leader.LeaderLatch;
 import org.apache.curator.utils.ZKPaths;
 
+import com.google.gson.Gson;
 import com.hqyg.disjob.common.Constants;
 import com.hqyg.disjob.common.exception.ZKNodeException;
 import com.hqyg.disjob.common.util.LocalHost;
@@ -29,7 +31,6 @@ import com.hqyg.disjob.register.job.JobOperationServiceImpl;
 import com.hqyg.disjob.register.job.WeightedRoundRobinScheduling;
 import com.hqyg.disjob.register.repository.ZnodeApiCuratorImpl;
 import com.hqyg.disjob.register.rpc.ConcurrentHashSet;
-import com.google.gson.Gson;
 
 /**
  * <pre>
@@ -723,5 +724,16 @@ public class SlaveUtils
 			 }
 		 LoggerUtil.debug("haha ===========project end=================");
 	}
+    
+    public static LeaderLatch getLeaderLatch(){
+    	while(leaderLatch == null){
+    		try {
+				TimeUnit.MILLISECONDS.sleep(500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+    	}
+    	return leaderLatch;
+    }
 }
 
