@@ -1,4 +1,3 @@
-<<<<<<< HEAD:Ejob-jar/src/test/java/com/hqyg/disjob/spring/SpringLableTest.java
 package com.hqyg.disjob.spring;
 /*package com.hqyg.disjob.spring;
 

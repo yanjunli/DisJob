@@ -1,4 +1,3 @@
-<<<<<<< HEAD:Ejob-jar/src/test/java/com/hqyg/disjob/spring/EJobBeanDefinitionParser.java
 package com.hqyg.disjob.spring;
 /*package com.hqyg.disjob.spring;
 
