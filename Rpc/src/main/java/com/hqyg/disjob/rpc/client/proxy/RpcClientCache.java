@@ -16,22 +16,19 @@ public class RpcClientCache {
 	private static final ReentrantLock lock = new ReentrantLock();
 	public static RpcClient get(HURL hurl) {
 		String serverKey = getRpcClientKey(hurl);
-		RpcClient client = rpcClientPool.get(serverKey);
-		if (client == null || !(client.isAvailable())) {
-			try{
-				lock.lock();
-				client = rpcClientPool.get(serverKey);
-				if(client==null ||!(client.isAvailable())){
-					RpcClient newClient = new RpcClient(hurl);
-					newClient.open();
-					client = newClient;
-					rpcClientPool.put(serverKey, newClient);
-				}
-			}finally{
-				lock.unlock();
+		try{
+			lock.lock();
+			RpcClient client = rpcClientPool.get(serverKey);
+			if (client == null) {
+				RpcClient newClient = new RpcClient(hurl);
+				newClient.open();
+				client = newClient;
+				rpcClientPool.put(serverKey, newClient);
 			}
+			return client;
+		}finally{
+			lock.unlock();
 		}
-		return client;
 	}
 	
 	public static void removeRpcClient(String key){

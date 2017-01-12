@@ -68,7 +68,7 @@ public class ChannelPoolFactory extends BasePooledObjectFactory<com.hqyg.disjob.
  			try {
  				NettyChannel channel = (NettyChannel)obj.getObject(); 
  				LoggerUtil.debug("yes validate object");
-				return channel.isAvailable() && channel.getChannel().isActive() ;
+				return  channel != null ?channel.getChannel().isActive():false ;
 			} catch (final Exception e) {
 				return false;
 			}

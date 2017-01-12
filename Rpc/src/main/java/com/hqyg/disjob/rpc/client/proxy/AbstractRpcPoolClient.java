@@ -130,12 +130,13 @@ public abstract class AbstractRpcPoolClient implements RpcPoolClient{
                     @Override
                     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
                     	super.channelInactive(ctx);
-                    	io.netty.channel.Channel channel = ctx.channel();
+                    	//channel状态的处理交给对象池处理
+                    	/*io.netty.channel.Channel channel = ctx.channel();
                     	String address = ServerLinkedService.getRemoterAddress(channel);
                     	LoggerUtil.debug(address+":in active;"+ctx.channel().toString());
                     	NettyChannel nettyChannel = ServerLinkedService.getNettyChannel(channel);
-/*                    	nettyChannel.close();
-*/                    	pool.getFactory().destroyObject(new PooledSoftReference<Channel>(new SoftReference<Channel>(nettyChannel)));
+                    	nettyChannel.close();
+                    	pool.getFactory().destroyObject(new PooledSoftReference<Channel>(new SoftReference<Channel>(nettyChannel)));*/
                     	
                     }
                 });
