@@ -71,8 +71,7 @@ public abstract class FailbackRegistry extends AbstractRegistry {
     @Override
     public void subscribe(HURL url, NotifyListener listener) {
         removeForFailedSubAndUnsub(url, listener);
-
-        try {
+         try {
             super.subscribe(url, listener);
         } catch (Exception e) {
              addToFailedMap(failedSubscribed, url, listener);
