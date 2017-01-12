@@ -110,7 +110,7 @@ public class ChannelPoolFactory extends BasePooledObjectFactory<com.hqyg.disjob.
 			}
 		}
 		
-		LoggerUtil.debug("[channel key]"+rpcClient.getChannelKey()+"[channelPoolFactory.destroyObject]"+rpcClient.getObjectPoolContainer());
+		//LoggerUtil.debug("[channel key]"+rpcClient.getChannelKey()+"[channelPoolFactory.destroyObject]"+rpcClient.getObjectPoolContainer());
 		super.destroyObject(obj);
 	}
 }

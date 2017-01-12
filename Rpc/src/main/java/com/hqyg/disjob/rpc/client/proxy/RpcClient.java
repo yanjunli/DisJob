@@ -54,8 +54,7 @@ public class RpcClient extends AbstractRpcPoolClient{
 				response = new RpcResponse();
 				response.setException("class name:"+request.getData().getClassName()+"method name :"+request.getData().getMethodName()+" borrow a channel is null."); 
 			}else{
-			//			response = channel.request(request);
-				response = writeMessage(channel.getChannel(), request);
+ 				response = writeMessage(channel.getChannel(), request);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
