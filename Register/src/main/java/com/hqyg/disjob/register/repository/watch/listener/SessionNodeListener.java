@@ -36,13 +36,11 @@ public class SessionNodeListener implements PathChildrenCacheListener{
  	        String path = event.getData().getPath();//->path:ejob/session/会话名称
  	        SlaveUtils.buildSessionHostMap(client);
   	        WatchApiCuratorImpl watch = new WatchApiCuratorImpl();
- 	        LoggerUtil.debug("haha watch child path=="+path);
+ 	        LoggerUtil.debug("watch child path=="+path);
   	        
             watch.pathChildrenWatch(client,path , false, new ServerSessionListener());
 		 }
-
-			 
-		
+ 
 	}
 	
 	
