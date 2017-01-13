@@ -11,8 +11,7 @@ import java.io.IOException;
 public class ExecutorInfoTest {
 
 	public static void main(String[] args) throws Exception {
-//		String logInfo = "D:/Eejob/log/debug.log.2016-11-20";
-//		String logInfo = "D:/__dev_tools/__dev_app/ejob/log/error.log";
+ 
 		String logInfo = "F:/debug.log";
 		BufferedReader reader = new BufferedReader(new FileReader(logInfo));
 		System.err.println(reader);
