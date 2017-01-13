@@ -12,7 +12,7 @@ import com.hqyg.disjob.monitor.db.domain.DBJobBasicInfo;
 public class DBJobBasicInfoOpAction extends Action{
 	public static final int BASICINFO_CREATE_OP = 1 ;
 	public static final int BASICINFO_UPDATE_OP = 2 ;
-	
+	 
 	private DBJobBasicInfoService jobService ;
 	private DBJobBasicInfo info ;
 	private int opType ;
