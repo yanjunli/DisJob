@@ -16,7 +16,7 @@
 		<mysql.version>5.1.21</mysql.version>
 		<httpclient.version>4.2.5</httpclient.version>
 	</properties>
-  
+   
 	<profiles>
 		<profile>
 			<!-- 发布环境 打包使用clean package install -Ppublish,其中-Ppublish指定使用开发环境 -->
