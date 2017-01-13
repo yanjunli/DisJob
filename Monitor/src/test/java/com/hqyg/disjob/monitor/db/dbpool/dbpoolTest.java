@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations="classpath:META-INF/spring-test-monitor.xml")
 public class dbpoolTest {
-
+ 
 	@Autowired
 	private com.jolbox.bonecp.BoneCPDataSource dataSourceTest;
 	@Test
