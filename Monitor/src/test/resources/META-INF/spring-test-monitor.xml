@@ -21,7 +21,7 @@
         location="file:/D:/globalegrowconf/ejob/*.properties" 
         ignore-unresolvable="true" ignore-resource-not-found="true" order="2"
 		system-properties-mode="NEVER" />
-    
+     
    <import resource="classpath:META-INF/spring-monitor.xml" />
    <bean class="com.hqyg.disjob.common.util.SpringWorkFactory" />
 </beans>
