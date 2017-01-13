@@ -5,7 +5,7 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.Random;
-
+ 
 public class ProduceJobTest {
 	private final static int[] SECONDS = {5,10,15,20,25,30,35,40,45,50,55};
 	
