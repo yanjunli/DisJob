@@ -1,11 +1,7 @@
 package com.hqyg.disjob.register.repository.watch.listener;
 
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
-import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.recipes.cache.PathChildrenCacheEvent;
@@ -13,9 +9,6 @@ import org.apache.curator.framework.recipes.cache.PathChildrenCacheEvent;
 import com.hqyg.disjob.common.Constants;
 import com.hqyg.disjob.common.util.LocalHost;
 import com.hqyg.disjob.common.util.LoggerUtil;
-import com.hqyg.disjob.register.cache.ZKJobCache;
-import com.hqyg.disjob.register.domain.Job;
-import com.hqyg.disjob.register.repository.ZnodeApiCuratorImpl;
 import com.hqyg.disjob.register.repository.watch.WatchApiCuratorImpl;
 import com.hqyg.disjob.register.rpc.NotifyListener;
 import com.hqyg.disjob.register.rpc.ZkNodeType;
@@ -79,22 +72,22 @@ public class JobNameListener extends AbstractJobBuild{
 			if (isMaster) {
 				buildJobByRPC(client, serverNode);
 			}
-			addGroupJobMap(serverNode, client);// 存入groupJobMap
-			addServerMap(serverNode); // 维护本地服务分组节点和服务节点缓存信息
+			//addGroupJobMap(serverNode, client);// 存入groupJobMap
+			//addServerMap(serverNode); // 维护本地服务分组节点和服务节点缓存信息
 		}
          
         if(org.apache.curator.framework.recipes.cache.PathChildrenCacheEvent.Type.CHILD_REMOVED == event.getType()){
             LoggerUtil.debug("remove job is ,"+event.getData().getPath());
-             List<String> serverNames = ZKJobCache.serverMap.get(groupNode);
+           /*  List<String> serverNames = ZKJobCache.serverMap.get(groupNode);
             if(CollectionUtils.isEmpty(serverNames)){
                 serverNames = new ArrayList<String>();
                 ZKJobCache.serverMap.put(groupNode, serverNames);
             }
             if(serverNames.contains(serverNode)){
                 serverNames.remove(serverNode);
-            }
+            }*/
             
-            String [] array = serverNode.split(Constants.PATH_SEPARATOR);
+            /*String [] array = serverNode.split(Constants.PATH_SEPARATOR);
             String groupName = array[3];
             String jobName = array[4];
             Set<Job> jobList =  ZKJobCache.groupJobMap.get(groupName);
@@ -102,7 +95,7 @@ public class JobNameListener extends AbstractJobBuild{
                  if(jobList.contains(new Job(groupName, jobName))){
                     jobList.remove(jobName);
                  }
-            }
+            }*/
           }
         
         if(org.apache.curator.framework.recipes.cache.PathChildrenCacheEvent.Type.CHILD_UPDATED == event.getType()){
@@ -110,7 +103,7 @@ public class JobNameListener extends AbstractJobBuild{
         }
        }
 
-    private void addServerMap(String serverNode){
+   /* private void addServerMap(String serverNode){
         List<String> serverNames = ZKJobCache.serverMap.get(groupNode);
         if(CollectionUtils.isEmpty(serverNames)){
             serverNames = new ArrayList<String>();
@@ -119,13 +112,13 @@ public class JobNameListener extends AbstractJobBuild{
         if(!serverNames.contains(serverNode)){
             serverNames.add(serverNode);
         }
-    }
+    }*/
 
     /**
      * 根据服务节点构造groupJobMap对象的值
      * @param serverNode
      */
-    private void addGroupJobMap(String serverNode,CuratorFramework client) {
+  /*  private void addGroupJobMap(String serverNode,CuratorFramework client) {
 		String[] array = serverNode.split(Constants.PATH_SEPARATOR);
 		String groupName = array[3];
 		String jobName = array[4];
@@ -144,6 +137,6 @@ public class JobNameListener extends AbstractJobBuild{
 		if (!jobList.contains(job)) {
 			jobList.add(job);
 		}
-    }
+    }*/
 }
 

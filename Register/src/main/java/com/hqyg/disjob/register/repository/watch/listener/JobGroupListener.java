@@ -1,9 +1,5 @@
 package com.hqyg.disjob.register.repository.watch.listener;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.recipes.cache.PathChildrenCacheEvent;
@@ -12,7 +8,6 @@ import com.hqyg.disjob.common.Constants;
 import com.hqyg.disjob.common.util.LocalHost;
 import com.hqyg.disjob.common.util.LoggerUtil;
 import com.hqyg.disjob.register.cache.ZKJobCache;
-import com.hqyg.disjob.register.domain.Job;
 import com.hqyg.disjob.register.repository.watch.WatchApiCuratorImpl;
 import com.hqyg.disjob.slaver.utils.SlaveUtils;
 
@@ -54,7 +49,7 @@ public class JobGroupListener extends AbstractJobBuild{
 					LoggerUtil.error("build job by rpc error",e);
 				}
             }
-            if (!ZKJobCache.groupList.contains(groupNode)){
+           /* if (!ZKJobCache.groupList.contains(groupNode)){
                 ZKJobCache.groupList.add(groupNode);
                 
                 if(array.length > 3){
@@ -64,21 +59,21 @@ public class JobGroupListener extends AbstractJobBuild{
                         ZKJobCache.groupJobMap.put(array[3], list);//维护groupname和list<job>缓存
                     }
                   }
-            }
+            }*/
             WatchApiCuratorImpl watch = new WatchApiCuratorImpl();
             watch.pathChildrenWatch(client, groupNode, false, new JobNameListener(groupNode));
         }
         
         if (org.apache.curator.framework.recipes.cache.PathChildrenCacheEvent.Type.CHILD_REMOVED == event.getType()){
             LoggerUtil.info("remove group is ," + event.getData().getPath());
-            String groupNode = event.getData().getPath();
-            if (ZKJobCache.groupList.contains(groupNode)){
+           // String groupNode = event.getData().getPath();
+            /*if (ZKJobCache.groupList.contains(groupNode)){
                 ZKJobCache.groupList.remove(groupNode);
-            }
-            if (ZKJobCache.serverMap.containsKey(groupNode)){
+            }*/
+           /* if (ZKJobCache.serverMap.containsKey(groupNode)){
                 ZKJobCache.serverMap.remove(groupNode);
-            }
-            ZKJobCache.groupJobMap.remove(array[3]); //维护缓存
+            }*/
+           // ZKJobCache.groupJobMap.remove(array[3]); //维护缓存
         }
         
         if (org.apache.curator.framework.recipes.cache.PathChildrenCacheEvent.Type.CHILD_UPDATED == event.getType()){

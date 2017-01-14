@@ -2,7 +2,6 @@ package com.hqyg.disjob.register.cache;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -30,17 +29,17 @@ public class ZKJobCache {
 	/**
 	 * 存放/ejob/rpc/下的组名列表
 	 */
-	public static List<String> groupList = new ArrayList<String>();
+	//public static List<String> groupList = new ArrayList<String>();
 
 	/**
 	 * 存放/etc/rpc/下组对应的server信息列表,key是group名,value是server值
 	 */
-	public static ConcurrentHashMap<String, List<String>> serverMap = new ConcurrentHashMap<String, List<String>>();
+	//public static ConcurrentHashMap<String, List<String>> serverMap = new ConcurrentHashMap<String, List<String>>();
 
 	/**
 	 * 在/etc/rpc下监听同步到rpc下时候,维护group和job列表缓存
 	 */
-	public static ConcurrentHashMap<String, Set<Job>> groupJobMap = new ConcurrentHashMap<String, Set<Job>>();
+	//public static ConcurrentHashMap<String, Set<Job>> groupJobMap = new ConcurrentHashMap<String, Set<Job>>();
 
 	
 	public static ConcurrentHashSet<EjobServerInfo> ipList = new ConcurrentHashSet<EjobServerInfo>();
