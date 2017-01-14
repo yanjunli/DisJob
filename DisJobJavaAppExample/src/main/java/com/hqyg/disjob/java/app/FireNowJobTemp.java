@@ -1,4 +1,4 @@
-package com.hqyg.ejob.java.app;
+package com.hqyg.disjob.java.app;
 
 import java.util.Date;
 
@@ -9,8 +9,8 @@ import com.hqyg.disjob.java.utils.DebugInfoPrintUtil;
 import com.hqyg.disjob.java.utils.TimeUtils;
 import com.hqyg.disjob.quence.TaskExecuteException;
 
-@JobDec(group="cronJob_1",jobName="fireNowJobTemp_0",quartz="0/12 * * * * ?",fireNow=true)
-public class FireNowJob_0 implements EJob{
+@JobDec(group="cronJob",jobName="fireNowJobTemp",quartz="0/10 * * * * ?",fireNow=true)
+public class FireNowJobTemp implements EJob{
 
 	@Override
 	public void beforeExecute(SchedulerParam schedulerParam) {

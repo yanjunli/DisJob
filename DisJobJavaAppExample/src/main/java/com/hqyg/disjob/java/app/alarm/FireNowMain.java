@@ -1,4 +1,4 @@
-package com.hqyg.ejob.java.app.alarm;
+package com.hqyg.disjob.java.app.alarm;
 
 import com.hqyg.disjob.java.EjobBootstrap;
 import com.hqyg.disjob.java.EjobConstants;
