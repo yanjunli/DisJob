@@ -12,8 +12,8 @@ public class ProduceJobTest {
 	private final static int[] MIN = {1,2,3,4,5,6,7,8,9,10};
 	private final static String prefix = "3000";
 	public static void main(String[] args) {
-		String srcPath = "E:/__work_space_middleware/EJob1.0Fixed/EjobJavaApp/src/main/java/com/hqyg/one/hundred/FireNowJobTemp.java"; 
-		String targetPath = "E:/__work_space_middleware/EJob1.0Fixed/EjobJavaApp/src/main/java/com/hqyg/one/hundred/FireNowJob_%s.java";
+		String srcPath = "E:/workspace/disjob/EjobJavaApp/src/main/java/com/hqyg/one/hundred/FireNowJobTemp.java"; 
+		String targetPath = "E:/workspace/disjob/EjobJavaApp/src/main/java/com/hqyg/one/hundred/FireNowJob_%s.java";
 		produceJob(srcPath,targetPath);
 	}
 
