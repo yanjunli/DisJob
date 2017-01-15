@@ -8,7 +8,7 @@ public interface Constants {
 	public static final String PATH_SEPARATOR = "/";
 	public static final String JOB_SEPARATOR = "|";
 	public static final String TRANSFER_CHAR = "\\";
-	public static final String ROOT = "/ejob";//测试环境  "/ejob-dev";
+	public static final String ROOT = "/disjob";//测试环境  "/disjob-dev";
 	public static final String SESSION_CONNECT_ROOT = ROOT; // php会话连接的根节点
 	public static final String APP_JOB_NODE_ROOT = "/job";
 	public static final String APP_JOB_NODE_CONFIG = "/config";
