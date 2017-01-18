@@ -9,7 +9,7 @@ public class CronTest {
 	public static void main(String[] args){
 		
 		System.out.println(CronUtils.captureName("ahgjk"));
-		
+		 
 		System.out.println(CronUtils.transferFromCronExpression("0 * * * * ?"));
 		
 		CronInfo cronInfo = new CronInfo();
