@@ -24,8 +24,6 @@ public class dbpoolTest {
 		System.out.println(conn2 == conn3);
 		System.out.println(conn3);
 
-
-		
 	}
 	
 	 
