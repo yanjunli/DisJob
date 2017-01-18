@@ -16,7 +16,7 @@ public class ProduceJobTest {
 		String targetPath = "E:/workspace/disjob/EjobJavaApp/src/main/java/com/hqyg/one/hundred/FireNowJob_%s.java";
 		produceJob(srcPath,targetPath);
 	}
-
+   
 	private static void produceJob(String srcPath,String targetPath) {
 		try {
 			int jobCount = 1000 ;
