@@ -5,9 +5,7 @@ import java.io.Serializable;
 
 public class ThreadPoolContainer implements Serializable{
 
-	/**
-	 * 
-	 */
+	 
 	private static final long serialVersionUID = 1L;
 	private int threadSize ; //线程池中活动线程池大小
 	private int largestPoolSize; //有史以来的峰值大小
@@ -16,7 +14,7 @@ public class ThreadPoolContainer implements Serializable{
 	private int completeTaskCount ;//已经调度完成的 task count 
 	private int taskCount ;//总的被调度的task count = complete + working + in queue
 	public int getThreadSize() {
-		return threadSize;
+		return threadSize;  
 	}
 	public void setThreadSize(int threadSize) {
 		this.threadSize = threadSize;
