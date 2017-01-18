@@ -23,7 +23,7 @@ import com.hqyg.disjob.monitor.db.service.DBUserService;
  *  Author：		Disjob
  *
  * </pre>
- */
+ */  
 public class DBUserServiceTest extends AbstractTest {
 	
 	@Autowired
