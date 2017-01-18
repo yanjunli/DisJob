@@ -1,4 +1,4 @@
-package com.hqyg.disjob.monitor.db.service;
+ package com.hqyg.disjob.monitor.db.service;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
@@ -20,7 +20,7 @@ import org.junit.runners.Suite.SuiteClasses;
  *  Author：		Disjob
  *
  * </pre>
- */
+ */   
 @RunWith(Suite.class)
 @SuiteClasses({ DBJobExeProgressServiceTest.class, DBJobBasicInfoServiceTest.class, DBStatisticsServiceTest.class })
 public class AllTests {
