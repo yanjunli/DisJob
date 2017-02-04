@@ -20,5 +20,5 @@ public class CronTest {
 		System.out.println(CronUtils.transferToCronExpression(cronInfo ));
 	}
 	
-	
+	  
 }
