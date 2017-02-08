@@ -28,8 +28,7 @@ public class EjobContextLoaderListener extends ContextLoaderListener {
 					LoggerUtil.error("Error deregistering JDBC driver {}",driver, ex);
 				}
 			} else {
-				// driver was not registered by the webapp's ClassLoader and may
-				// be in use elsewhere
+				
 				LoggerUtil.error("Not deregistering JDBC driver {} as it does not belong to this webapp's ClassLoader",driver);
 			}
 		}
