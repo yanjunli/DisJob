@@ -53,7 +53,7 @@ public final class CuratorClientInterceptor extends HandlerInterceptorAdapter {
         }
         LoggerUtil.info("get ZK client success！");
         return true;
-    }
+    } 
     
     @Override
     public void postHandle(final HttpServletRequest request, final HttpServletResponse response, final Object handler, final ModelAndView modelAndView) throws Exception {
