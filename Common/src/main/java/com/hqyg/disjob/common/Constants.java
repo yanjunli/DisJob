@@ -60,6 +60,6 @@ public interface Constants {
 	public static final boolean isCanConnPool = true ;
 
 	public static final int RECON_COUNT_FAIL = 3;
-	
-	public static final int TIMEOUT_TIMES = 2 ;//超时时间倍数 报警提示
+	//超时时间倍数 报警提示
+	public static final int TIMEOUT_TIMES = 2 ;
 }
