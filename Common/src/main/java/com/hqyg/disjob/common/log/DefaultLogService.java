@@ -72,7 +72,7 @@ public class DefaultLogService implements LogService {
 
     public void warn(String msg) {
         warn.warn(msg);
-    }
+    } 
 
     public void warn(String format, Object... argArray) {
         warn.warn(format, argArray);
