@@ -29,7 +29,7 @@ public class ProduceJobTest {
 	 		}
 	 		sb.append(String.format(jobName,"SpringJob_"+(i-1), "SpringJob_"+(i-1))+"\r\n");
 	 	}
-	}
+	} 
 
 	private static void produceFireNowJob() {
 		String path = "E:/__work_space_middleware/EJob1.1Dev/Ejob-java-web/src/main/java/com/globalgrow/ejob/spring/firenow/FireNowJobTemp.java"; 
