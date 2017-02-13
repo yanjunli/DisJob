@@ -17,7 +17,7 @@ import org.quartz.TriggerBuilder;
 import org.quartz.TriggerKey;
 import org.quartz.impl.StdSchedulerFactory;
 public class MyExample_1 {
-
+  
 	AtomicInteger atomicInteger = new AtomicInteger(0);
 	
 	static Scheduler sched;
