@@ -16,7 +16,7 @@ package com.hqyg.disjob.common.exception;
  *  Author：		Disjob
  *
  * </pre>
- */
+ */  
 public class WebUserExistsException extends EjobAbstractCheckException {
 	private static final long serialVersionUID = 5938178916897833968L;
 
