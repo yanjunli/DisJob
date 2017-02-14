@@ -7,7 +7,7 @@ import java.net.InetSocketAddress;
  * 
  * @author Disjob
  *
- */
+ */  
 
 public class TransportException extends IOException {
 
