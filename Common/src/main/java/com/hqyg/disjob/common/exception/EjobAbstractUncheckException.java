@@ -16,7 +16,7 @@
 
 package com.hqyg.disjob.common.exception;
 
-
+   
 /**
  * @author Disjob
  * @version 创建时间：2016-5-19
