@@ -12,5 +12,5 @@ public class ZKNodeException2 extends EjobAbstractCheckException{
         super(message, cause);
     }
     
-    
+      
 }
