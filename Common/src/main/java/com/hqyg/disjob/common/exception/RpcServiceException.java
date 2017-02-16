@@ -15,3 +15,4 @@ public class RpcServiceException extends EjobAbstractUncheckException {
         super(message, EjobErrorMsgConstant.SERVICE_DEFAULT_ERROR);
     }
 }
+  
