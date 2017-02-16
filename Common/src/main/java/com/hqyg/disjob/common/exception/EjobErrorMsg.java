@@ -6,7 +6,7 @@ import java.io.Serializable;
  * @author Disjob
  * @version 创建时间：2016-5-19
  * 
- */
+ */ 
 public class EjobErrorMsg implements Serializable {
     private static final long serialVersionUID = 4909459500370103048L;
 
