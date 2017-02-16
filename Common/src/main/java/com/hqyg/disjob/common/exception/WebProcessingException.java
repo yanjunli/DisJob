@@ -15,7 +15,7 @@ package com.hqyg.disjob.common.exception;
  *  Date：		2016年5月19日
  *  Author：		Disjob
  *
- * </pre>  
+ * </pre>   
  */
 public class WebProcessingException extends EjobAbstractCheckException {
 
