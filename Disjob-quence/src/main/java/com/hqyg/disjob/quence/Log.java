@@ -17,7 +17,7 @@ public class Log {
 		StackTraceElement[] ste = Thread.currentThread().getStackTrace();
 		if (ste == null) {
 			return "";
-		}
+		} 
 
 		boolean srcFlag = false;
 		for (int i = 0; i < ste.length; i++) {
