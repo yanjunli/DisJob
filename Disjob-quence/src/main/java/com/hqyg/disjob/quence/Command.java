@@ -13,7 +13,7 @@ public abstract class Command implements Runnable{
 	public Command() {
 		
 		this.createTime = System.currentTimeMillis();
-	}
+	} 
 	
 	public void run() {
 		long start = System.currentTimeMillis();
