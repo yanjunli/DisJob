@@ -12,7 +12,7 @@ public abstract class Action implements Runnable {
 	
 	public Action() {
 		createTime = System.currentTimeMillis();
-	}
+	} 
 	
 	public Action(ActionQueue queue) {
 		this.queue = queue;
