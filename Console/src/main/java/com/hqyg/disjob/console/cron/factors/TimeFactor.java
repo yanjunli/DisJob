@@ -21,7 +21,7 @@ public class TimeFactor extends BaseFactor implements BuildInterface{
 	public RangeFactor getRangeFactor() {
 		return rangeFactor;
 	}
-
+ 
 	public void setRangeFactor(RangeFactor rf) {
 		this.rangeFactor = rf;
 	}
