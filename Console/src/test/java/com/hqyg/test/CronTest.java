@@ -11,7 +11,7 @@ public class CronTest {
 		System.out.println(CronUtils.captureName("ahgjk"));
 		 
 		System.out.println(CronUtils.transferFromCronExpression("0 * * * * ?"));
-		
+		  
 		CronInfo cronInfo = new CronInfo();
 		cronInfo.setAllDays(true);
 		cronInfo.setAllHours(false);
