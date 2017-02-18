@@ -23,7 +23,7 @@ public class BaseFactor {
 	public boolean isAllspec() {
 		return allspec;
 	}
-
+   
 	public void setAllspec(boolean allspec) {
 		this.allspec = allspec;
 	}
