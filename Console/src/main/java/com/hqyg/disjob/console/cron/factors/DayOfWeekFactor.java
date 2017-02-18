@@ -23,7 +23,7 @@ public class DayOfWeekFactor extends TimeFactor{
 
 	public void setLastweekdayindex(Integer lastweekdayindex) {
 		this.lastweekdayindex = lastweekdayindex;
-	}
+	} 
 
 	public String build(){
 		String timeCron = super.build();
