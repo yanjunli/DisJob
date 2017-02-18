@@ -18,7 +18,7 @@ public class SpecifyFactor implements BuildInterface{
 		for(int i = 0; i < length; i++ ){
 			specify[i] = Integer.parseInt(specify0[i]);
 		}
-	}
+	}  
 	
 	public int[] getSpecify() {
 		return specify;
