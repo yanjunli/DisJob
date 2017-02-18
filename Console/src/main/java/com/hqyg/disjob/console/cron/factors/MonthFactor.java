@@ -18,7 +18,7 @@ public class MonthFactor extends TimeFactor {
 				}
 				return buffer.toString();
 			}
-		});
+		}); 
 		super.setSpecifyFactor(specifyFactor);
 	}
 	
