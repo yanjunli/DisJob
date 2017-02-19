@@ -11,7 +11,7 @@ import com.hqyg.disjob.java.utils.DebugInfoPrintUtil;
 import com.hqyg.disjob.java.utils.TimeUtils;
 import com.hqyg.disjob.quence.TaskExecuteException;
 
-@Service
+@Service 
 @JobDec(group="springCronJob",jobName="fireNowJobTemp",quartz="0/10 * * * * ?",fireNow=true)
 public class FireNowJobTemp implements EJob{
 
