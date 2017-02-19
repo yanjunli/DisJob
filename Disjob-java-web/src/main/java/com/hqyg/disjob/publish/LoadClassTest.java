@@ -17,7 +17,7 @@ package com.hqyg.disjob.publish;
 //import com.hqyg.disjob.java.utils.ClasspathPackageScanner;
 //
 //public class LoadClassTest {
-//
+//  
 //	public static void main(String[] args) {
 //		try {  
 //            //第一种  配置成文件格式  
