@@ -14,7 +14,7 @@ import com.hqyg.disjob.quence.TaskExecuteException;
 public class SpringJob_0 implements EJob{
 	public SpringJob_0() {
 		System.err.println("spring 启动... SpringJob_0 ");
-	}
+	} 
 
 	@Override
 	public void beforeExecute(SchedulerParam schedulerParam) {
