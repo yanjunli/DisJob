@@ -13,4 +13,4 @@ public class SpringServiceTest {
 		AlamerLogWriter.writer.println(info);
 		AlamerLogWriter.writer.flush();
 	}
-}
+}  
