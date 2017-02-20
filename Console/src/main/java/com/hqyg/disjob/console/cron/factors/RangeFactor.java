@@ -25,7 +25,7 @@ public class RangeFactor extends BaseFactor implements BuildInterface{
 		}
 		return factorRangeCron;
 	}
-
+ 
 	private String buildRangeFactor() {
 		if (interval == 1 || interval == 0) {
 			return new StringBuffer().append(startAt).append(MIDDLE_LINE).append(endAt)
