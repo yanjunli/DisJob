@@ -11,7 +11,7 @@ public class SpecifyFactor implements BuildInterface{
 	public SpecifyFactor(int[] specify0){
 		this.specify = specify0;
 	}
-	
+	  
 	public SpecifyFactor(String[] specify0){
 		int length = specify0.length;
 		specify = new int[length];
