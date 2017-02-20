@@ -9,7 +9,7 @@ public class NthWeekdayFactor implements BuildInterface{
 	int weekday;
 
 	public NthWeekdayFactor() {
-	}
+	}  
 
 	public NthWeekdayFactor(int nthweek, int weekday) {
 		this.nthweek = nthweek;
