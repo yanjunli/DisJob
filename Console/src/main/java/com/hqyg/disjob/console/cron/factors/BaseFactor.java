@@ -15,7 +15,7 @@ public class BaseFactor {
 	public boolean isNospec() {
 		return nospec;
 	}
-
+  
 	public void setNospec(boolean nospec) {
 		this.nospec = nospec;
 	}
