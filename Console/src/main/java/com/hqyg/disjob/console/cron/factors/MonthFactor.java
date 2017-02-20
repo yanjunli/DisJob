@@ -3,7 +3,7 @@ package com.hqyg.disjob.console.cron.factors;
 import com.hqyg.disjob.console.cron.BuildInterface;
 
 public class MonthFactor extends TimeFactor {
-
+ 
 	@Override
 	public void setSpecifyFactor(final SpecifyFactor specifyFactor) {
 		specifyFactor.setBuild(new BuildInterface() {
