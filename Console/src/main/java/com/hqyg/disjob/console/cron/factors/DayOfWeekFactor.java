@@ -12,7 +12,7 @@ public class DayOfWeekFactor extends TimeFactor{
 	public NthWeekdayFactor getNthWeekday() {
 		return nthWeekday;
 	}
-
+ 
 	public void setNthWeekday(NthWeekdayFactor nthWeekday) {
 		this.nthWeekday = nthWeekday;
 	}
