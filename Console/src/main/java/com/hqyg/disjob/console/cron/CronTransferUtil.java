@@ -11,7 +11,7 @@ import com.hqyg.disjob.console.cron.factors.TimeFactor;
 import com.hqyg.disjob.console.util.CronExpression;
 
 public class CronTransferUtil {
-
+ 
 	static final String star = "*";
 	static final String question = "?";
 	
