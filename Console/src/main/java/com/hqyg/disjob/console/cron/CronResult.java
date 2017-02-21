@@ -12,7 +12,7 @@ public class CronResult {
 	
 	public String getCrontab() {
 		return crontab;
-	}
+	} 
 
 	public void setCrontab(String crontab) {
 		this.crontab = crontab;
@@ -32,7 +32,7 @@ public class CronResult {
 
 	public void setTransferSuccess(boolean isTransferSuccess) {
 		this.isTransferSuccess = isTransferSuccess;
-	}
+	} 
 
 	public String getMessage() {
 		return message;
