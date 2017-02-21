@@ -7,7 +7,7 @@ import com.hqyg.disjob.console.cron.factors.TimeFactor;
 import com.hqyg.disjob.console.util.CronExpression;
 
 public class EjobCronExpression {
-
+ 
 	private TimeFactor secondFactor;
 
 	private TimeFactor minuteFactor;
