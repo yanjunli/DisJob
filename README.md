@@ -1,6 +1,6 @@
 # DisJob
 
-DisJob 是一个基于Quartz、Netty、ZooKeeper的分布式rpc调度job框架。
+DisJob 是一个基于Quartz、Netty、ZooKeeper的分布式rpc调度job框架，是目前业内极少使用tcp协议来做异步RPC调度的框架，因为基于tcp协议，所以支持多语言，多语言系统间定时调用非常方便。
 
 #一、项目背景
 disjob分布式任务调度概述<br/>
