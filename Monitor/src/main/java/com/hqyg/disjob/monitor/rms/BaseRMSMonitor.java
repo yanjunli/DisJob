@@ -17,7 +17,7 @@ import com.hqyg.disjob.monitor.rms.util.RMSPropertityConfigUtil;
 public class BaseRMSMonitor implements Runnable {
 
 	protected boolean available = true;
-	
+	 
 	private static final int maxWaitingMsgToSend = 500;
 	private ResponseHandler responseHandler = new DefaultResponseHandler();
 	private static BlockingQueue<Runnable> rmsWorkQueue = new LinkedBlockingQueue<Runnable>(maxWaitingMsgToSend);
