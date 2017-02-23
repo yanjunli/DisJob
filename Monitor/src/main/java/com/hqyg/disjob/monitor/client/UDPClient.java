@@ -18,7 +18,7 @@ import com.hqyg.disjob.quence.Log;
 import com.google.gson.Gson;
 import com.hqyg.disjob.monitor.client.handler.UDPClientHandler;
 
- 
+ //我们跟php端通信的时候,php处理是tcp连接不可用的时候使用udp通信,将执行进度传回给disjob
 public class UDPClient {
     private EventLoopGroup group;
 
