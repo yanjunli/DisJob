@@ -12,6 +12,9 @@ import com.hqyg.disjob.monitor.rms.pojo.RMSMonitorInfo;
 import com.hqyg.disjob.monitor.rms.util.RMSPropertityConfigUtil;
 import com.hqyg.disjob.monitor.util.MonitorSpringWorkFactory;
 
+/**
+  报警自检，这是公司报警平台的需要，后期将该代码去掉
+**/
 public class SelfTestRMSMonitor extends BaseRMSMonitor{
 
 	private static final String SELF_TEST_MSG = "ejob-rms-self-test-message";
