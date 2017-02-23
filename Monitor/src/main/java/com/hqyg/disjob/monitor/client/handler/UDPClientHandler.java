@@ -6,7 +6,7 @@ import io.netty.channel.socket.DatagramPacket;
 import io.netty.util.CharsetUtil;
 
 /**
- * udp客户端处理类
+ * udp客户端处理类，代码注释掉
  */
 public class UDPClientHandler extends SimpleChannelInboundHandler<DatagramPacket> {
 
