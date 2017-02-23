@@ -7,7 +7,7 @@ import com.hqyg.disjob.common.util.LoggerUtil;
 import com.google.gson.Gson;
 
 public class MonitorResponse{
-
+  
 	private String code;
 	
 	private String msg;
