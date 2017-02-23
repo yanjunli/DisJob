@@ -8,7 +8,7 @@ import com.hqyg.disjob.monitor.rms.pojo.RMSMonitorInfo;
  * 目前发送报警的条件机制只有次数
  * @author Disjob
  *
- */
+ */ 
 public class RMSSendCondition extends AbstractRMSSendCondition{
 
 	public RMSSendCondition(RMSMonitorInfo observiable, Integer v) {
