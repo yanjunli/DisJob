@@ -23,14 +23,14 @@ public class CleanUpListener  extends ContextLoaderListener {
     public void contextInitialized(ServletContextEvent sce) {
         // do nothing
     }
-
+  
     @Override
     public void contextDestroyed(ServletContextEvent event) {
     	super.contextDestroyed(event);
         shutdownOns();
         deregisterJdbcDrivers();
         
-    }
+    }  
 
     @SuppressWarnings("unchecked")
     private void shutdownOns() {
