@@ -13,7 +13,7 @@ import com.hqyg.disjob.common.util.LoggerUtil;
 
 
 public class EjobContextLoaderListener extends ContextLoaderListener {
-	
+	  
 	@Override
 	public void contextDestroyed(ServletContextEvent event) {
 		ClassLoader cl = Thread.currentThread().getContextClassLoader();
