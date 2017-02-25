@@ -8,7 +8,7 @@ import java.nio.charset.Charset;
  * @author Adam
  *
  */
-public class SystemDefault {
+public class SystemDefault {  
 	
 	/**
 	 * 系统用户默认密码
