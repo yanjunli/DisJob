@@ -23,7 +23,7 @@ public class DayOfMonthFactor extends TimeFactor {
 
 	public Integer getNearestWeekday() {
 		return nearestWeekday;
-	}
+	} 
 
 	public void setNearestWeekday(Integer nearestWeekday) {
 		this.nearestWeekday = nearestWeekday;
