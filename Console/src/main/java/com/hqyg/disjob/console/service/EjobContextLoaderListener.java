@@ -14,7 +14,7 @@ public class EjobContextLoaderListener extends ContextLoaderListener {
 	            DriverManager.deregisterDriver(DriverManager.getDrivers().nextElement());
 	        }catch(Exception e){
 	            e.printStackTrace();
-	        }
+	        } 
 	}
 
 }
