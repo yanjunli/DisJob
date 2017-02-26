@@ -19,7 +19,7 @@ public class ClearMDCFilter implements Filter {
 		try {
 			chain.doFilter(request, response);
 		} finally {
-			MDC.clear();
+			MDC.clear(); 
 		}
 	}
 
