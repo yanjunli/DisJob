@@ -15,7 +15,7 @@ public class AppHelper {
 	public static String encryptPassword(String passwordSource) {
 		return EncryptUtils.encryptByMD5(passwordSource);
 	}
-	
+	  
 	//日志处理
 	public static void errorLog(Class classz,Throwable e){
 		LoggerUtil.error(String.format(ERROR, new Object[]{classz.getName(),e.getMessage()}));
