@@ -23,7 +23,7 @@ public class MonthFactor extends TimeFactor {
 	}
 	
 	public MonthFactor setDefaultValue(String defaultValue) {
-		this.defaultValue = defaultValue;
+		this.defaultValue = defaultValue; 
 		return this;
 	}
 }
