@@ -17,7 +17,7 @@ import java.util.List;
  *  Date：		2016年5月19日
  *  Author：		Disjob
  *
- * </pre>
+ * </pre> 
  */
 public interface JobInfoService {
 	/**
