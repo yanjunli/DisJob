@@ -20,7 +20,7 @@ public class EncryptUtils {
 	 * 
 	 * @param str
 	 * @param encoding
-	 * @return
+	 * @return 
 	 */
 	public static byte[] getMessageDigest(String str, String encoding) {
 		try {
