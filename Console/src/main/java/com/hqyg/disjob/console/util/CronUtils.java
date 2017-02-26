@@ -16,7 +16,7 @@ import com.google.common.collect.HashBiMap;
 import com.google.common.collect.Lists;
 
 public class CronUtils {
-
+ 
 	public static final String ALL = "*";
 	
 	public static final String COMMA = ",";
