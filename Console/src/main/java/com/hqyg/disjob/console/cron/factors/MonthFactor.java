@@ -24,6 +24,6 @@ public class MonthFactor extends TimeFactor {
 	
 	public MonthFactor setDefaultValue(String defaultValue) {
 		this.defaultValue = defaultValue; 
-		return this;
+		return this; 
 	}
 }
