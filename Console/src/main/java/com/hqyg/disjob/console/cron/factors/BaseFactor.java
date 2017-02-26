@@ -13,7 +13,7 @@ public class BaseFactor {
 	private boolean allspec = false;
 
 	public boolean isNospec() {
-		return nospec;
+		return nospec; 
 	}
   
 	public void setNospec(boolean nospec) {
