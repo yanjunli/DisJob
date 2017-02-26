@@ -23,7 +23,7 @@ public class RangeFactor extends BaseFactor implements BuildInterface{
 		if(super.build() == null){
 			factorRangeCron = buildRangeFactor();
 		}
-		return factorRangeCron;
+		return factorRangeCron; 
 	}
  
 	private String buildRangeFactor() {
