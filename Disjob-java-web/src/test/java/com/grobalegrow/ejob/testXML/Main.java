@@ -11,6 +11,6 @@ public class Main {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"disjob.xml"});
 		context.start();
 		System.in.read();
-	}
+	} 
    
 }
