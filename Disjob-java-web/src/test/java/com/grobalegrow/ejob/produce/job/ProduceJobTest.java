@@ -14,7 +14,7 @@ public class ProduceJobTest {
 		produceFireNowJob();
 		produceFireNowServletJob();
 	}
-
+  
 	private static void produceConfig() {
 		String groupStart = "<ejob:group id=\"springJob_%s\" name=\"springJob%s\">";
 		String jobName =	 "<ejob:job name=\"%s\" classname=\"com.globalgrow.ejob.spring.%s\" method=\"execute\" />" ;
