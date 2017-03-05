@@ -19,7 +19,7 @@ public abstract class AbstractAlarmCondition extends BaseCondition<JobProgressTi
 	public abstract boolean isFinished() ;
 	
 	@Override
-	public void handler() {
+	public void handler() { 
 		MessagePipleService messageService = MonitorSpringWorkFactory.getMessagePipleService();
 		JobProgressTimeInfo jptime = getObserviable();
 		String requestId = jptime.getRequestId() ;
