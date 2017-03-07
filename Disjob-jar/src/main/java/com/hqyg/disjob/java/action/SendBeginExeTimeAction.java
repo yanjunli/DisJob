@@ -15,7 +15,7 @@ import com.hqyg.disjob.quence.TaskExecuteException;
  */
 public class SendBeginExeTimeAction extends SendTimeAction{
 
-	private Date beginExeTime ;
+	private Date beginExeTime =null;
 	public SendBeginExeTimeAction(RpcContainer rpcContiner,Date beginExeTime) {
 		super(rpcContiner);
 		this.beginExeTime = beginExeTime ;
