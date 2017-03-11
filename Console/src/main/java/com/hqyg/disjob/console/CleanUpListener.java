@@ -1,5 +1,5 @@
 package com.hqyg.disjob.console;
-/*package com.hqyg.disjob.console;
+
 import java.lang.management.ManagementFactory;
 import java.sql.Driver;
 import java.sql.DriverManager;
@@ -101,4 +101,3 @@ public class CleanUpListener  extends ContextLoaderListener {
         }
     }
 }
-*/
