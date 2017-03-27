@@ -41,7 +41,7 @@ public class AuthZKRegistry {
 		znode.setACL(client, AuthConstants.groupRootPath, AuthConstants.defaultAuthACLs);
 		znode.setACL(client, AuthConstants.adminRootPath, AuthConstants.defaultAuthACLs);
 		znode.setACL(client, AuthConstants.visitorRootPath, AuthConstants.defaultAuthACLs);
-		
+		//
 		String jobrootpath = ZKPaths.makePath(Constants.ROOT, Constants.APP_JOB_NODE_ROOT);
 		if(!znode.checkExists(client, jobrootpath)){
 			znode.createPersistent(client, jobrootpath, null);
