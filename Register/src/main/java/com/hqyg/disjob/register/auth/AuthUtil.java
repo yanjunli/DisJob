@@ -17,7 +17,7 @@ import org.apache.zookeeper.server.auth.DigestAuthenticationProvider;
 import com.hqyg.disjob.common.util.LoggerUtil;
 import com.hqyg.disjob.register.center.RegistryExceptionHandler;
 import com.google.common.collect.Lists;
-
+   
 public class AuthUtil {
 
 	private static class AuthACLProvider extends DefaultACLProvider{
