@@ -24,8 +24,7 @@ import com.hqyg.disjob.rpc.client.HURL;
  * @author Disjob
  */
 public final class AverageAllocationJobShardingStrategy implements JobShardingStrategy {
-
-	@Override
+ 	@Override
 	public Map<HURL, List<String>> sharding(List<HURL> serversList,JobShardingStrategyOption option) {
 
 		if (serversList.isEmpty()) {
@@ -57,29 +56,41 @@ public final class AverageAllocationJobShardingStrategy implements JobShardingSt
 			int i = 0;
 			List<String> paramList = option.getParamList();
 			int size = serversList.size();
+			
 			// 循环平均匹配
 			for (String param : paramList) {
-				i++;
-				int tmp = i % size;
-				HURL hurl = serversList.get(tmp);
-				List<String> list = result.get(hurl);
-				if(result.containsKey(hurl)){
- 					if(!list.contains(param)){
-						list.add(param);
-					}
- 				}else{
- 					if(list == null){
- 						list = new ArrayList<String>();
- 					}
- 					list.add(param);
- 					result.put(hurl, list);
- 				}
+				//如果只有一个参数但是有多个hurl的时候则随机取一个值得到hurl
+				if(paramList.size() ==1){
+ 					int index = new Random().nextInt(size);
+					HURL hurl = serversList.get(index);
+					buildResultByHurl(result, param, hurl);
+				}else{
+					i++;
+					int tmp = i % size;
+					HURL hurl = serversList.get(tmp);
+					buildResultByHurl(result, param, hurl);
 				 
+			 }
  				//buildResult(result, entry.getKey(), serversList.get(tmp));
 			}
 		}
 		
 		return result;
+	}
+
+	private void buildResultByHurl(Map<HURL, List<String>> result, String param, HURL hurl) {
+		List<String> list = result.get(hurl);
+		if(result.containsKey(hurl)){
+			if(!list.contains(param)){
+				list.add(param);
+			}
+		}else{
+			if(list == null){
+				list = new ArrayList<String>();
+			}
+			list.add(param);
+			result.put(hurl, list);
+		}
 	}
 
 	private Map<HURL, List<String>> shardingAliquot(final List<HURL> serversList, JobShardingStrategyOption option) {
@@ -157,12 +168,13 @@ public final class AverageAllocationJobShardingStrategy implements JobShardingSt
 	}
 
 	public static void main(String[] args) {
+		 
 		String jobName = "test";
 		Map<String, String> shardingItemParameters = new HashMap<String, String>();
-		/*shardingItemParameters.put("192.168.1.1","name=111&ip=192.168.1.1&age=13");
+		shardingItemParameters.put("192.168.1.1","name=111&ip=192.168.1.1&age=13");
 		shardingItemParameters.put("123", "name=222&ip=192.168.2.1&age=13");
 		shardingItemParameters.put("456", "name=333&ip=192.168.2.1&age=13");
-		shardingItemParameters.put("79796416", "name=444&ip=192.168.3.1&age=13");*/
+		shardingItemParameters.put("79796416", "name=444&ip=192.168.3.1&age=13");
 		shardingItemParameters.put("192.168.1.1", "name=999&ip=192.168.2.1&age=13");
 		shardingItemParameters.put("456", "name=888&ip=192.168.2.1&age=13");
 
