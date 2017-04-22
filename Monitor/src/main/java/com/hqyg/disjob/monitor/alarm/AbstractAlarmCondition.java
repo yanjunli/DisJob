@@ -35,7 +35,7 @@ public abstract class AbstractAlarmCondition extends BaseCondition<JobProgressTi
 			info.setExecuteEnd(DateUtil.getFormat(new Date(jptime.getJobCompleteTime()), DateUtil.YYYY_MM_DD_HH_MM_SS));
 			JobService jobService = MonitorSpringWorkFactory.getJobService();
 			jobService.getJobTracker(requestId).notifyUpdateDBBasicInfoEvent(info);;
-			
+			 
 			//2、一个周期处理，卸载相关数据
 			jobService.removeJobTracker(requestId);
 			jobService.removeAlarmCondition(requestId);

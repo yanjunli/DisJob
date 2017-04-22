@@ -19,7 +19,7 @@ public class DBUserActionRecordServiceTest extends AbstractTest{
 //		record.setActionParam("564613");
 //		service.createUserActionRecord(record);
 	}
-	
+	  
 	@Test
 	public void selectUserActionRecordByPaging(){
 		System.out.println(service.selectUserActionRecordList(25, 0, "job409").size());

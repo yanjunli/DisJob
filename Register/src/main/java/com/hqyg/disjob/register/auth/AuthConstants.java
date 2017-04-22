@@ -38,7 +38,7 @@ public class AuthConstants {
 	public static final String OWNER = "owner";
 	public static final String COLON_READER = ":" + READER;
 	public static final String COLON_OWNER = ":" + OWNER;
-	
+	 
 	public static final int PERMS_ALL = ZooDefs.Perms.ALL;
 	public static final int PERMS_READ = ZooDefs.Perms.READ;
 

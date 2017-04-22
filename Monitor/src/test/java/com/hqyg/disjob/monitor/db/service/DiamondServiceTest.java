@@ -33,4 +33,4 @@ public class DiamondServiceTest extends AbstractTest {
 		//service.t();
 	}
 }
-*/
+*/  
